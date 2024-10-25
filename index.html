@@ -13,12 +13,16 @@
                 throw new Error(`Response status: ${response.status}`);
                 }
                 const catDataArray = await response.json();
-                for (catItem of catDataArray) {
-                    let div = document.createElement("div");
-                    div.classList.add("item");
-                    div.innerText = catItem.text;
-                    let container = document.getElementById("data-container");
-                    container.appendChild(div);
+                if (catDataArray != null) {
+                    for (catItem of catDataArray) {
+                        let div = document.createElement("div");
+                        div.classList.add("item");
+                        div.innerText = catItem.text;
+                        let container = document.getElementById("data-container");
+                        if (container != null) {
+                            container.appendChild(div);
+                        }   
+                    }
                 }
             } catch (error) {
                 console.error(error.message);
