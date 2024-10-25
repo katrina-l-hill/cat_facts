@@ -13,7 +13,6 @@ This is an application that integrates with a third-party API.
 
 ## Files
 - `index.html`: The main HTML file containing the structure of the web page.
-- `tests.js`: A suite of tests for validating the functionality of the web application.
 
 ## API Used
 - **Cat Facts API**: Provides random daily facts about cats.
