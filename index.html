@@ -4,34 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Today's Cat Facts</title>
-    <script type="text/javascript">
-        async function getData() {
-            const url = "https://cat-fact.herokuapp.com/facts";
-            try {
-                const response = await fetch(url);
-                if (!response.ok) {
-                throw new Error(`Response status: ${response.status}`);
-                }
-                const catDataArray = await response.json();
-                if (catDataArray != null) {
-                    for (catItem of catDataArray) {
-                        let div = document.createElement("div");
-                        div.classList.add("item");
-                        div.innerText = catItem.text;
-                        let container = document.getElementById("data-container");
-                        if (container != null) {
-                            container.appendChild(div);
-                        }   
-                    }
-                }
-            } catch (error) {
-                console.error(error.message);
-            }
-        }
-        window.onload = async (evt) => {
-            await getData();            
-        };
-    </script>
+    <script type="module" src="app.js"></script>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -57,8 +30,13 @@
 </head>
 <body>
     <div class="data-container-parent">
-        <div id="data-container" class="data-container">
-        </div>
+        <div id="data-container" class="data-container"></div>
     </div>
+    <script type="module">
+        import { getData } from './app.js'; // Import the function from app.js
+        window.onload = async () => {
+            await getData();            
+        };
+    </script>
 </body>
 </html>

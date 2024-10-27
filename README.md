@@ -24,3 +24,5 @@ This is an application that integrates with a third-party API.
    - cd into the repository directory
 2. **Run the Main program**:
    - Run `start index.html` to open the file in a browser
+3. **Run the tests**:
+   - Run `npm test`
