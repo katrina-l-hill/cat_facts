@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Today's Cat Facts</title>
-    <script type="module" src="app.js"></script>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -32,11 +31,6 @@
     <div class="data-container-parent">
         <div id="data-container" class="data-container"></div>
     </div>
-    <script type="module">
-        import { getData } from './app.js'; // Import the function from app.js
-        window.onload = async () => {
-            await getData();            
-        };
-    </script>
+    <script type="module" src="./script.js"></script>
 </body>
 </html>

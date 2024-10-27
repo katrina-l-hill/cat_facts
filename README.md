@@ -23,6 +23,6 @@ This is an application that integrates with a third-party API.
    - git clone https://github.com/katrina-l-hill/cat_facts.git
    - cd into the repository directory
 2. **Run the Main program**:
-   - Run `start index.html` to open the file in a browser
+   - Run `start index.html` to open the file in a browser OR open a local developent server such as Go Live in VS Code
 3. **Run the tests**:
    - Run `npm test`
